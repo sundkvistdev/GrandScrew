@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DLCs>
+	<DLC src="dlc0/index.xml"/>
+	<DLC src="dlc1" crashOnNotFound="false"/>
+	<DLC src="dlc2" crashOnNotFound="false"/>
+	<DLC src="dlc3" crashOnNotFound="false"/>
+	<DLC src="dlc4" crashOnNotFound="false"/>
+	<DLC src="dlc5" crashOnNotFound="false"/>
+	<DLC src="dlc6" crashOnNotFound="false"/>
+	<DLC src="dlc7" crashOnNotFound="false"/>
+	<DLC src="dlc8" crashOnNotFound="false"/>
+	<DLC src="dlc9" crashOnNotFound="false"/>
+</DLCs>

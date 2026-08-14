@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DLCPack>
+	<Name>Basegame System</Name>
+	<Author>Samsoft</Author>
+	<Version>1.0.0</Version>
+	<Files>
+		<File type="script" id="main_script">index.js</File>
+	</Files>
+	<Script>main_script</Script>
+</DLCPack>

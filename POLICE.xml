@@ -1,0 +1,120 @@
+<!-- Custom Engine: NOT GTA. -->
+<!-- X+ = EAST, Y+ = NORTH Map Units 1.0 = 1m -->
+<PoliceMod:Config version="2.6">
+	<SceneConfig id="scene_cfg0">
+		<AllowAutoAdjust>true</AllowAutoAdjust>
+		<MaxAliveCops>40</MaxAliveCops>
+		<MaxCorpseCops>500</MaxCorpseCops>
+		<MaxDrivenCars>20</MaxDrivenCars>
+		<MaxIdleCars>80</MaxIdleCars>
+		<MaxWreckCars>100</MaxWreckCars>
+		<DespawnOnLag>false</DespawnOnLag>
+	</SceneConfig>
+	<Regions>
+		<!-- Format:
+			CX(WE) CY(SN) W H
+		-->
+		<Region id="SAN_ANDREAS">
+			<Layer>0</Layer>
+			<All/>
+		</Region>
+		<Region id="CITY">
+			<Layer>1</Layer>
+			<Rect>0 -1300 1800 1000</Rect>
+		</Region>
+		<Region id="COUNTY">
+			<Layer>1</Layer>
+			<Rect>0 1300 1800 1000</Rect>
+		</Region>
+		<Region id="BAY_TOWN">
+			<Layer>2</Layer>
+			<Rect>-1600 1200 320 200</Rect>
+		</Region>
+	</Regions>
+	<PoliceAgencies>
+		<PoliceAgency id="lspd">
+			<Name>Los Santos Police</Name>
+			<Icon>icon_lspd</Icon>
+			<Region>CITY</Region>
+			<Cars amount="80">
+				<Car id="car0">
+					<Name>LSPD Cruiser</Name>
+					<Model>police_cruiser0</Model>
+					<Texture>police_cruiser0_lspd</Texture>
+					<Equipment>police_sirens0</Equipment>
+					<Stats>
+						<Maneuvering>0.6</Maneuvering>
+						<MaxSpeed unit="km/h">160</MaxSpeed>
+						<Acceleration unit="km/h^2">20,000</Acceleration>
+					</Stats>
+				</Car>
+			</Cars>
+			<Cops amount="200">
+				<Cop id="cop0">
+					<Name>LSPD Officer</Name>
+					<Model>police_officer0</Model>
+					<Texture>police_officer0_lspd</Texture>
+					<Equipment>police_equipment0</Equipment>
+					<Stats>
+						<!-- Normalized value -->
+						<Agility>0.6</Agility>
+						<WalkSpeed unit="km/h">4.6</WalkSpeed>
+						<JogSpeed unit="km/h">8.0</JogSpeed>
+						<MaxSpeed unit="km/h">9.8</MaxSpeed>
+						<Stamina unit="s">45</Stamina>
+					</Stats>
+					<PursuitLines>
+						<PursuitLine class="traf_stop">
+							<Source>law_say</Source>
+							<Subtitle>LSPD, You're being stopped!</Subtitle>
+						</PursuitLine>
+						<PursuitLine class="traf_stop">
+							<Source>law_say1</Source>
+							<Subtitle>LSPD, License and registration!</Subtitle>
+						</PursuitLine>
+						<PursuitLine class="chase">
+							<Source>law_yell0</Source>
+							<Subtitle>Police, Fuck you!</Subtitle>
+						</PursuitLine>
+						<PursuitLine class="chase">
+							<Source>law_yell1</Source>
+							<Subtitle>Freeze, shitface!</Subtitle>
+						</PursuitLine>
+						<PursuitLine class="chase">
+							<Source>law_yell2</Source>
+							<Subtitle>Drop it, or I'll kill you!</Subtitle>
+						</PursuitLine>
+						<PursuitLine class="chase">
+							<Source>law_yell3</Source>
+							<Subtitle>The LSPD, which is us, will fuck you up!</Subtitle>
+						</PursuitLine>
+					</PursuitLines>
+				</Cop>
+			</Cops>
+		</PoliceAgency>
+		<PoliceAgency id="sheriff">
+			<Name>Los Santos Sheriff</Name>
+			<Icon>icon_sheriff</Icon>
+			<Region>COUNTY</Region>
+			<Cars amount="30">
+				<Car templateId="lspd:car0">
+					<Texture>police_cruiser0_sheriff</Texture>
+				</Car>
+			</Cars>
+			<Cops amount="75">
+				<Cop templateId="lspd:cop0">
+					<Texture>police_officer0_sheriff</Texture>
+				</Cop>
+			</Cops>
+		</PoliceAgency>
+		<!-- Decor -->
+		<PoliceAgency id="baypd">
+			<Name>Bay Police Department</Name>
+			<Icon>icon_sheriff</Icon>
+			<Region>BAY_TOWN</Region>
+			<Cars/>
+			<Cops/>
+		</PoliceAgency>
+	</PoliceAgencies>
+	<DefaultPoliceAgency region="SAN_ANDREAS">lspd</DefaultPoliceAgency>
+</PoliceMod:Config>

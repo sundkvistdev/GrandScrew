@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<UseDLCsFile>false</UseDLCsFile>
+	<DLCManifest/>
+	<DLCDirectory>dlc</DLCDirectory>
+	<!-- FUCK YOU!!! -->
+	<SavesDirectory>save</SavesDirectory>
+	<ModsDirectory/><!-- USE DLCs!!! -->
+	<LangDirectory>lang</LangDirectory>
+</Configuration>
